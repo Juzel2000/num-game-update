@@ -16,7 +16,7 @@ document.querySelector('.again').addEventListener('click', function () {
   document.querySelector('.score').textContent = score;
   document.querySelector('main').style.backgroundColor='black';
   document.querySelector('.message').textContent = 'start Gussing';
-  // document.querySelector('.number').textContent = '?';
+  document.querySelector('.number').textContent = '?';
 
 
 
