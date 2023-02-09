@@ -53,6 +53,8 @@ document.querySelector('.check').addEventListener('click', function () {
     else{
       document.querySelector('.message').textContent = 'You lost';
       document.querySelector('.score').textContent = '0';
+      document.querySelector('main').style.backgroundColor='red';
+
       
     }
 
