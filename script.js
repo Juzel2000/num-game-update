@@ -41,13 +41,12 @@ document.querySelector('.check').addEventListener('click', function () {
       highscore = score;
       document.querySelector('.highscore').textContent=highscore;
     }
-
-
-
-  } else if (guess > secretnumber) {
+  } 
+  else if (guess !== secretnumber) {
     score--;
     if(score>0){
-      document.querySelector('.message').textContent = 'too high';
+      document.querySelector('.message').textContent =
+      guess > secretnumber? 'too high': 'too low';
       document.querySelector('.score').textContent = score;
 
     }
@@ -56,22 +55,37 @@ document.querySelector('.check').addEventListener('click', function () {
       document.querySelector('.score').textContent = '0';
       
     }
-    
-    
-  } else if (guess < secretnumber) {
-    
-    score--;
-    if(score>0){
-      document.querySelector('.message').textContent = 'too low';
-      document.querySelector('.score').textContent = score;
-    }
-    else{
-      document.querySelector('.message').textContent = 'You lost';
-      document.querySelector('.score').textContent = '0';
-      document.querySelector('main').style.backgroundColor='red';
-      
-    }
-    
+
   }
+  
+  // else if (guess > secretnumber) {
+  //   score--;
+  //   if(score>0){
+  //     document.querySelector('.message').textContent = 'too high';
+  //     document.querySelector('.score').textContent = score;
+
+  //   }
+  //   else{
+  //     document.querySelector('.message').textContent = 'You lost';
+  //     document.querySelector('.score').textContent = '0';
+      
+  //   }
+    
+    
+  // } else if (guess < secretnumber) {
+    
+  //   score--;
+  //   if(score>0){
+  //     document.querySelector('.message').textContent = 'too low';
+  //     document.querySelector('.score').textContent = score;
+  //   }
+  //   else{
+  //     document.querySelector('.message').textContent = 'You lost';
+  //     document.querySelector('.score').textContent = '0';
+  //     document.querySelector('main').style.backgroundColor='red';
+      
+  //   }
+    
+  // }
   
 });
