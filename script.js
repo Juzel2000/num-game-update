@@ -94,14 +94,14 @@ document.querySelector('.check').addEventListener('click', function () {
         else if(count==3){
             if(secretnumber<=10){
                 let start = Math.trunc(Math.random()*secretnumber)+1;
-                end = start+9;
+                let end = start+9;
                 showhint(start,end)
     
             }
             else if(secretnumber<=15 && secretnumber>=11){
                 let diff = (secretnumber-10)+1
                 let start = Math.trunc(Math.random()*diff)+1;
-                end= start+9
+                 let end= start+9
                 showhint(start,end)
     
             }
@@ -109,7 +109,7 @@ document.querySelector('.check').addEventListener('click', function () {
                 let diff = (secretnumber-10)+1
                 // max =15 min=diff
                 let start= Math.floor(Math.random() * (15 - diff + 1)) + diff;
-                end=start+9
+                let end=start+9
                 showhint(start,end)
     
     
@@ -118,35 +118,35 @@ document.querySelector('.check').addEventListener('click', function () {
         }
         else if(count==4){
             if(secretnumber<=5 && secretnumber>=1){
-                start= start = Math.trunc(Math.random()*secretnumber)+1;
-                end=start+4
+                let start= start = Math.trunc(Math.random()*secretnumber)+1;
+                let end=start+4
                 showhint(start,end)
             }
             else if(secretnumber<=10 && secretnumber>=6){
-                diff = (secretnumber-5)+1;
-                start= Math.floor(Math.random() * (secretnumber - diff + 1)) + diff;
+                let diff = (secretnumber-5)+1;
+                let start= Math.floor(Math.random() * (secretnumber - diff + 1)) + diff;
                 end=start+4;
                 showhint(start,end)
     
             }
             else if(secretnumber<=15 && secretnumber>=11){
-                diff = (secretnumber-5)+1;
-                start= Math.floor(Math.random() * (secretnumber - diff + 1)) + diff;
-                end=start+4;
+                let diff = (secretnumber-5)+1;
+                let start= Math.floor(Math.random() * (secretnumber - diff + 1)) + diff;
+                let end=start+4;
                 showhint(start,end)
     
             }
             else if(secretnumber<=20 && secretnumber>=16){
-                diff = (secretnumber-5)+1;
-                start= Math.floor(Math.random() * (secretnumber - diff + 1)) + diff;
-                end=start+4;
+                let diff = (secretnumber-5)+1;
+                let start= Math.floor(Math.random() * (secretnumber - diff + 1)) + diff;
+                let end=start+4;
                 showhint(start,end)
     
             }
             else{
-                diff = (secretnumber-5)+1;
-                start= Math.floor(Math.random() * (21 - diff + 1)) + diff;  
-                end=start+4;
+                let diff = (secretnumber-5)+1;
+                let start= Math.floor(Math.random() * (21 - diff + 1)) + diff;  
+                let end=start+4;
                 showhint(start,end)
             }
         }
@@ -168,35 +168,6 @@ document.querySelector('.check').addEventListener('click', function () {
 
   }
   
-  // else if (guess > secretnumber) {
-  //   score--;
-  //   if(score>0){
-  //     document.querySelector('.message').textContent = 'too high';
-  //     document.querySelector('.score').textContent = score;
-
-  //   }
-  //   else{
-  //     document.querySelector('.message').textContent = 'You lost';
-  //     document.querySelector('.score').textContent = '0';
-      
-  //   }
-    
-    
-  // } else if (guess < secretnumber) {
-    
-  //   score--;
-  //   if(score>0){
-  //     document.querySelector('.message').textContent = 'too low';
-  //     document.querySelector('.score').textContent = score;
-  //   }
-  //   else{
-  //     document.querySelector('.message').textContent = 'You lost';
-  //     document.querySelector('.score').textContent = '0';
-  //     document.querySelector('main').style.backgroundColor='red';
-      
-  //   }
-    
-  // }
   
 });
 
@@ -205,12 +176,4 @@ console.log(m);
 
 var timesClicked = 0;
 
-// $("#menu_button").click(function() {
-//     timesClicked++;
 
-//     if (timesClicked>1) {
-//         //run second function
-//     } else {
-//         //run first function
-//     }
-// })
