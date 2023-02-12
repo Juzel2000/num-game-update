@@ -22,10 +22,6 @@ document.querySelector('.again').addEventListener('click', function () {
   //edit changed as comment
   // document.querySelector('.number').textContent = '?';             3333
 
-
-
-
-
 });
 
 document.querySelector('.check').addEventListener('click', function () {
