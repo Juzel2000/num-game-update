@@ -6,13 +6,14 @@ document.querySelector('.number').textContent = secretnumber;
 
 let hint=document.querySelector('.message')
 let btn = document.querySelector('.check')
-var count =1;
+let count =1;
 
 
 document.querySelector('.again').addEventListener('click', function () {
   secretnumber = Math.trunc(Math.random() * 25) + 1;
   document.querySelector('.number').textContent = secretnumber;
   document.querySelector('.guess').value='';
+  
 
   score = 25;
   document.querySelector('.score').textContent = score;
@@ -61,6 +62,9 @@ document.querySelector('.check').addEventListener('click', function () {
         }
     
         count++;
+        document.querySelector('.again').addEventListener('click', function () {
+          count=0;
+        });
         
     
         if(count==2){
