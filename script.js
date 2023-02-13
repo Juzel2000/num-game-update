@@ -2,7 +2,7 @@
 let score = 25;
 var secretnumber = Math.trunc(Math.random() * 25) + 1;
 let highscore = 0;
-document.querySelector('.number').textContent = secretnumber;    
+// document.querySelector('.number').textContent = secretnumber;    
 
 let hint=document.querySelector('.message')
 let btn = document.querySelector('.check')
@@ -11,7 +11,7 @@ let count =1;
 
 document.querySelector('.again').addEventListener('click', function () {
   secretnumber = Math.trunc(Math.random() * 25) + 1;
-  document.querySelector('.number').textContent = secretnumber;
+  // document.querySelector('.number').textContent = secretnumber;
   document.querySelector('.guess').value='';
   
 
@@ -32,6 +32,8 @@ document.querySelector('.check').addEventListener('click', function () {
 
   if (!guess) {
     document.querySelector('.message').textContent = 'No number';
+    count=0;
+    console.log(count)
   } 
 
   else if (guess === secretnumber) {
@@ -64,6 +66,7 @@ document.querySelector('.check').addEventListener('click', function () {
         count++;
         document.querySelector('.again').addEventListener('click', function () {
           count=0;
+          
         });
         
     
@@ -118,7 +121,7 @@ document.querySelector('.check').addEventListener('click', function () {
         }
         else if(count==4){
             if(secretnumber<=5 && secretnumber>=1){
-                let start= start = Math.trunc(Math.random()*secretnumber)+1;
+                let start = Math.trunc(Math.random()*secretnumber)+1;
                 let end=start+4
                 showhint(start,end)
             }
