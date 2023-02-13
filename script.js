@@ -85,7 +85,7 @@ document.querySelector('.check').addEventListener('click', function () {
                 // let diff = (secretnumber+15)-25
                 // let s = secretnumber-diff
                 let diff2= (secretnumber-15)+1
-                const start = Math.floor(Math.random() * (11 - diff2+1 )) + diff2;
+                let start = Math.floor(Math.random() * (11 - diff2+1 )) + diff2;
                 let end= start+14; 
                 showhint(start,end)
             }
@@ -101,7 +101,7 @@ document.querySelector('.check').addEventListener('click', function () {
             else if(secretnumber<=15 && secretnumber>=11){
                 let diff = (secretnumber-10)+1
                 let start = Math.trunc(Math.random()*diff)+1;
-                 let end= start+9
+                let end= start+9
                 showhint(start,end)
     
             }
@@ -125,7 +125,7 @@ document.querySelector('.check').addEventListener('click', function () {
             else if(secretnumber<=10 && secretnumber>=6){
                 let diff = (secretnumber-5)+1;
                 let start= Math.floor(Math.random() * (secretnumber - diff + 1)) + diff;
-                end=start+4;
+                let end=start+4;
                 showhint(start,end)
     
             }
